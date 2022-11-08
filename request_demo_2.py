@@ -31,7 +31,7 @@ def lambda_handler(event, context):
                 print("Invoking the Auth URL...")
 
                 authUrl = 'https://cloudinfra-gw.portal.checkpoint.com/auth/user'
-                data = '{ "email": "demo-environment@checkpoint.com", "password": "Ly755900Ly755900!" }'
+                data = '{ "email": "demo-environment@checkpoint.com", "password": "xxxxxxxx!" }'
 
                 authResponse = requests.post(authUrl, data=data,headers={"Content-Type": "application/json"})
                 print("Auth Response: ", authResponse.text)
