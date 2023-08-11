@@ -88,7 +88,6 @@ def lambda_handler(event, context):
     else:
         try:
             table.put_item(
-                # Item={'id': identifier, 'email':  email, 'companyName':  companyName, 'commodity': commodity, 'equipment':  equipment, 'loadType': loadType, 'pickupDateTime': pickupDateTime, 'origin':  origin, 'dh_o': dh_o, 'destination': destination, 'dh_d': dh_d, 'rate':  rate, 'phoneNumber': phoneNumber, 'partialInfo': partialInfo, 'reeferInfo': reeferInfo, 'notes':  notes}
                 Item=item
             )
             return {
