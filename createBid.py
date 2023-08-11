@@ -35,10 +35,6 @@ def lambda_handler(event, context):
             return {"statusCode": 500,
                     "message": "Error: Please provide the Carrier Email!"
                     }
-        # elif phoneNumber == '':
-        #     return {"statusCode": 500,
-        #             "message": "Error: Please provide the Carrier Phone Number!"
-        #             }
         elif offer == '':
             return {"statusCode": 500,
                     "message": "Error: Please provide the Carrier Offer!"
