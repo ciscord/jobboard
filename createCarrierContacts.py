@@ -38,10 +38,6 @@ def lambda_handler(event, context):
         return {"statusCode": 500,
                 "message": "Error: Please provide an Email Id for Carrier!"
                 }
-    # elif phoneNumber == '':
-    #     return {"statusCode": 500,
-    #             "message": "Error: Please provide a Phone Number for Carrier!"
-    #             }
     elif hqLocation == '':
         return {"statusCode": 500,
                 "message": "Error: Please provide a Carrier HQ Location!"
@@ -54,7 +50,6 @@ def lambda_handler(event, context):
         print(item)
         try:
             table.put_item(
-                # Item={'email': email, 'password':  password, 'companyName': companyName, 'companyAddress':  companyAddress, 'nscNumber': nscNumber, 'dotNumber': dotNumber, 'mcNumber':  mcNumber, 'carrierName': carrierName, 'phoneNumber':  phoneNumber, 'aboutUs': aboutUs, 'websiteURL': websiteURL, 'trailerCapacity':  trailerCapacity, 'equipment': equipment, 'operatingProvinces': operatingProvinces}
                 Item=item 
             )
             return {"statusCode": 200,
