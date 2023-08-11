@@ -76,19 +76,10 @@ def lambda_handler(event, context):
         return {"statusCode": 500,
                 "message": "Error: Please provide an Destination Province or State!"
                 }
-    # elif dhOrigin == '':
-    #     return {"statusCode": 500,
-    #             "message": "Error: Please provide a DeadHead Origin!"
-    #             }
-    # elif dhDest == '':
-    #     return {"statusCode": 500,
-    #             "message": "Error: Please provide a DeadHead Destination!"
-    #             }
     else:
         print(item)
         try:
             table.put_item(
-                # Item={'email': email, 'password':  password, 'companyName': companyName, 'companyAddress':  companyAddress, 'nscNumber': nscNumber, 'dotNumber': dotNumber, 'mcNumber':  mcNumber, 'carrierName': carrierName, 'phoneNumber':  phoneNumber, 'aboutUs': aboutUs, 'websiteURL': websiteURL, 'trailerCapacity':  trailerCapacity, 'equipment': equipment, 'operatingProvinces': operatingProvinces}
                 Item=item 
             )
             return {"statusCode": 200,
