@@ -94,10 +94,6 @@ def lambda_handler(event, context):
         return {"statusCode": 500,
                 "message": "Error: Please provide the Destination Town/City and Province/State details!"
                 }
-    # elif phoneNumber == '':
-    #     return {"statusCode": 500,
-    #             "message": "Error: Please provide the Phone Number!"
-    #             }
     elif postDate == '':
         return {"statusCode": 500,
                 "message": "Error: Please provide the Load Post Date!"
@@ -107,7 +103,6 @@ def lambda_handler(event, context):
             
             if isNew:
                 response = table.put_item(
-                    # Item={'id': identifier, 'coordinators': coordinators, email':  email, 'companyName':  companyName, 'commodity': commodity, 'equipment':  equipment, 'loadType': loadType, 'pickupDateTime': pickupDateTime, 'origin':  origin, 'dh_o': dh_o, 'destination': destination, 'dh_d': dh_d, 'rate':  rate, 'phoneNumber': phoneNumber, 'partialInfo': partialInfo, 'reeferInfo': reeferInfo, 'notes': notes}
                     Item=item
                 )
             else:
